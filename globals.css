@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0F19;
+  --color-surface: #111827;
+  --color-accent-cyan: #22D3EE;
+  --color-accent-blue: #3B82F6;
+  
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-300 font-body antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-heading text-white;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface/40 backdrop-blur-xl border border-white/5;
+}
+
+.text-gradient-cyan {
+  @apply bg-gradient-to-r from-accent-cyan to-accent-blue bg-clip-text text-transparent;
+}
