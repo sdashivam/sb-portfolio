@@ -81,7 +81,6 @@ sb-portfolio/
 │   ├── lib/                 # Shared utilities, hooks, and helpers
 │   ├── styles/              # Global CSS and Tailwind tokens
 │   └── types/               # Global TypeScript interfaces
-├── CLAUDE.md                # Development context and project commands
 ├── package.json             # Project dependencies and scripts
 ├── tailwind.config.ts       # Tailwind CSS configuration
 ├── tsconfig.json            # TypeScript configuration
@@ -223,6 +222,7 @@ npm install framer-motion lucide-react react-icons reactflow three @react-three/
 # Deployment
 
 This portfolio is optimized for deployment on Vercel. 
+This portfolio is optimized for deployment on Vercel. (https://sb-portfolio-opal.vercel.app/)
 
 ## Deploy Using Vercel
 
@@ -287,6 +287,19 @@ Potential future additions:
 - Blog CMS
 - Visitor analytics dashboard
 - AI evaluation visualizer
+
+---
+
+# Contact
+
+## LinkedIn
+Add your LinkedIn profile.
+
+## GitHub
+Add your GitHub repository links.
+
+## Medium
+Add your technical writing profile.
 
 ---
 
