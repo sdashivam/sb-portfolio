@@ -93,20 +93,27 @@ Each section should reinforce:
 
 # Folder Structure
 
-enterprise-ai-portfolio/
-
-public/
-images/
-videos/
-resume/
-
-src/
-app/
-components/
-data/
-lib/
-styles/
-types/
+sb-portfolio/
+├── public/                  # Static assets
+│   ├── images/              # Project visual assets and brand graphics
+│   ├── videos/              # Cinematic backgrounds and AI demos
+│   ├── resume/              # Downloadable professional credentials
+│   └── favicon.ico
+├── src/                     # Application source code
+│   ├── app/                 # Next.js 15 App Router (Pages, Layouts, API)
+│   ├── components/          # React components
+│   │   ├── canvas/          # Three.js/Fiber neural visualizations
+│   │   ├── flow/            # Architecture diagrams (React Flow)
+│   │   ├── sections/        # Main portfolio sections (Hero, Projects)
+│   │   └── ui/              # Shared UI components (Glassmorphism)
+│   ├── data/                # Content definitions and project metadata
+│   ├── lib/                 # Shared utilities, hooks, and helpers
+│   ├── styles/              # Global CSS and Tailwind tokens
+│   └── types/               # Global TypeScript interfaces
+├── CLAUDE.md                # Development context and project commands
+├── package.json             # Project dependencies and scripts
+├── tailwind.config.ts       # Tailwind CSS configuration
+└── README.md                # Project documentation
 
 ---
 
@@ -295,6 +302,7 @@ Use:
 * blurred surfaces
 * grid layouts
 * large spacing
+* header clearance (min pt-28 for fixed nav)
 * cinematic depth
 * layered visuals
 * elegant gradients
