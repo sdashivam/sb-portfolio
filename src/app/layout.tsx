@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { AnimatedBackground } from "@/components/background/AnimatedBackground";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className="min-h-screen antialiased relative bg-background">
         <AnimatedBackground />
         <div className="relative z-10">{children}</div>
+        <SpeedInsights />
       </body>
     </html>
   );
