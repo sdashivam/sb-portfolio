@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ContactCard } from "./ContactCard";
 import { AIAvatar } from "./AIAvatar";
-import { Mail, Code2, Link2, FileText, Smartphone, Video } from "lucide-react";
+import { Mail, Code2, Link2, FileText, Smartphone, Video, BookOpen } from "lucide-react";
 
 // Dynamically import NeuralBackground with SSR disabled to prevent React 19 internal conflicts
 const NeuralBackground = dynamic(
@@ -18,6 +18,7 @@ export function ContactSection() {
     { icon: Code2, label: "GitHub", value: "sdashivam", href: "https://github.com/sdashivam" },
     { icon: Link2, label: "LinkedIn", value: "Shivam Bhatt", href: "https://www.linkedin.com/in/shivam-bhatt-b79b65111" },
     { icon: Video, label: "YouTube", value: "@shivambhatt", href: "https://youtube.com/@shivambhatt" },
+    { icon: BookOpen, label: "Medium", value: "Shivam Bhatt", href: "https://medium.com/@shivam-bhatt" },
     { icon: Mail, label: "Email", value: "bhatt.shivamk@gmail.com", href: "mailto:bhatt.shivamk@gmail.com" },
     { icon: FileText, label: "Resume", value: "Download Resume", href: "/resume/Shivam_Bhatt_Resume.pdf" },
   ];

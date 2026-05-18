@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { AnimatedBackground } from "../background/AnimatedBackground";
 
 const METRICS = [
-  { value: "7+", label: "Years Experience" },
+  { value: "4", label: "FTE Save" },
   { value: "$10M+", label: "Operational Savings" },
-  { value: "60%", label: "Fraud Recall Improvement" },
+  { value: "61%", label: "Fraud Recall Improvement" },
   { value: "92%", label: "AI Task Accuracy" },
 ];
 
@@ -78,17 +79,16 @@ export function Hero() {
 
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-emerald-500 to-violet-500 p-1">
                 <div className="w-full h-full rounded-full bg-black/80 backdrop-blur-xl overflow-hidden">
-                  {/* Replace with your image */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-6xl md:text-8xl font-bold text-white">SB</span>
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/cv_profile.png"
+                      alt="Shivam Bhatt"
+                      fill
+                      priority
+                      sizes="(min-width: 768px) 24rem, 18rem"
+                      className="object-cover"
+                    />
                   </div>
-                  {/* Use this for your photo:
-                  <img
-                    src="/path-to-your-image.jpg"
-                    alt="Shivam Bhatt"
-                    className="w-full h-full object-cover"
-                  />
-                  */}
                 </div>
               </div>
             </div>

@@ -308,7 +308,7 @@ export function ProjectCarousel() {
     <section 
       id="projects" 
       suppressHydrationWarning 
-      className="py-12 px-6 relative bg-surface/5 backdrop-blur-sm z-10"
+      className="scroll-mt-28 py-12 px-6 relative bg-surface/5 backdrop-blur-sm z-10"
     >
       <AnimatePresence>
         {selectedArch && (

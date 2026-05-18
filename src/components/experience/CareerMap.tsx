@@ -10,10 +10,11 @@ const EXPERIENCES = [
     role: "Manager - Future Analytics and DE",
     period: "Sep 2025 - Present",
     achievements: [
-      "Led end-to-end development and production deployment of ML-based post-detection system, increasing Recall by 60% at constant FPR",
+      "Played a key role in the development and production deployment of ML-based post-detection system, increasing Recall by 61% at constant FPR",
       "Maintaining risk appetite (0-1%) across different market segments and improving Straight-Through Processing (STP) by 80%",
       "Implemented ongoing model monitoring for PSI/CSI, AUC drift, and calibration, reducing time-to-detect model degradation from 30 to 15 days",
-      "Led Champion-challenger testing and threshold tuning, delivering $50K incremental value while keeping PSI < 0.1 and override rate < 5%"
+      "Collaborated on champion–challenger testing and threshold calibration to improve model effectiveness and operational reliability while maintaining PSI < 0.1 and override rates below 5%",
+      "Enhanced retrieval performance using semantic search and re-ranking pipelines, achieving ~48% improvement in information retrieval efficiency."
     ],
     color: "cyan",
   },
@@ -27,7 +28,8 @@ const EXPERIENCES = [
       "Applied fuzzy matching (Levenshtein distance), string or phonetic similarity algorithms for improved matching accuracy",
       "Engineered feature pipelines for text normalization, tokenization, and similarity scoring across multilingual datasets",
       "Developed scalable screening architecture aligned with regulatory risk thresholds, enabling deployment across multiple regions",
-      "Delivered ~$10M cost savings for a single market (UAE) by automating investigation workflows"
+      "Delivered ~$10M cost savings for a single market (UAE) by automating investigation workflows",
+      "Contributed to the development of ML-based risk detection systems, reducing manual investigation effort and delivering operational efficiency equivalent to ~4 FTE capacity."
     ],
     color: "cyan",
   },
@@ -83,7 +85,7 @@ const EXPERIENCES = [
 
 export function CareerMap() {
   return (
-    <section id="roadmap" className="py-12 px-6 bg-surface/5 backdrop-blur-sm relative z-10">
+    <section id="experience" className="scroll-mt-28 py-12 px-6 bg-surface/5 backdrop-blur-sm relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
