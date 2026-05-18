@@ -111,7 +111,7 @@ export default function ArchitecturePage() {
   }
 
   return (
-    <div className="min-h-screen py-12 px-6">
+    <div className="min-h-screen pt-28 pb-12 px-6">
       <div className="max-w-5xl mx-auto">
         <Link 
           href="/#projects"

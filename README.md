@@ -2,6 +2,8 @@
 
 A premium enterprise-grade AI Engineer portfolio built using Next.js, TypeScript, TailwindCSS, and Framer Motion.
 
+(https://sb-portfolio-opal.vercel.app/)
+
 This portfolio showcases:
 - Enterprise AI Systems
 - GenAI Applications
@@ -63,26 +65,27 @@ This portfolio showcases:
 
 ```bash
 sb-portfolio/
-│
-├── public/
-│   ├── images/
-│   ├── videos/
-│   ├── resume/
+├── public/                  # Static assets
+│   ├── images/              # Project visual assets and brand graphics
+│   ├── videos/              # Cinematic backgrounds and AI demos
+│   ├── resume/              # Downloadable professional credentials
 │   └── favicon.ico
-│
-├── src/
-│   ├── app/
-│   ├── components/
-│   ├── data/
-│   ├── lib/
-│   ├── styles/
-│   └── types/
-│
-├── CLAUDE.md
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
+├── src/                     # Application source code
+│   ├── app/                 # Next.js 15 App Router (Pages, Layouts, API)
+│   ├── components/          # React components
+│   │   ├── canvas/          # Three.js/Fiber neural visualizations
+│   │   ├── flow/            # Architecture diagrams (React Flow)
+│   │   ├── sections/        # Main portfolio sections (Hero, Projects)
+│   │   └── ui/              # Shared UI components (Glassmorphism)
+│   ├── data/                # Content definitions and project metadata
+│   ├── lib/                 # Shared utilities, hooks, and helpers
+│   ├── styles/              # Global CSS and Tailwind tokens
+│   └── types/               # Global TypeScript interfaces
+├── CLAUDE.md                # Development context and project commands
+├── package.json             # Project dependencies and scripts
+├── tailwind.config.ts       # Tailwind CSS configuration
+├── tsconfig.json            # TypeScript configuration
+└── README.md                # Project documentation
 ```
 
 ---
@@ -219,7 +222,7 @@ npm install framer-motion lucide-react react-icons reactflow three @react-three/
 
 # Deployment
 
-This portfolio is optimized for deployment on Vercel. (https://sb-portfolio-opal.vercel.app/)
+This portfolio is optimized for deployment on Vercel. 
 
 ## Deploy Using Vercel
 
@@ -284,19 +287,6 @@ Potential future additions:
 - Blog CMS
 - Visitor analytics dashboard
 - AI evaluation visualizer
-
----
-
-# Contact
-
-## LinkedIn
-Add your LinkedIn profile.
-
-## GitHub
-Add your GitHub repository links.
-
-## Medium
-Add your technical writing profile.
 
 ---
 
