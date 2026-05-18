@@ -97,6 +97,12 @@ const NeuralNetwork = () => {
 };
 
 export const BackgroundSystem = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden bg-background">
       {/* Layer 1: Animated Grid */}
@@ -110,13 +116,15 @@ export const BackgroundSystem = () => {
       />
       
       {/* Layer 2: Neural Network Animation */}
-      <div className="absolute inset-0 z-[1] opacity-40">
-        <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
-          <NeuralNetwork />
-        </Canvas>
-      </div>
+      {mounted && (
+        <div className="absolute inset-0 z-[1] opacity-40">
+          <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+            <NeuralNetwork />
+          </Canvas>
+        </div>
+      )}
 
-      <LiveOrchestrator />
+      {mounted && <LiveOrchestrator />}
 
       {/* Layer 5: Gradient Glows */}
       <motion.div 

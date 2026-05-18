@@ -83,13 +83,14 @@ const EXPERIENCES = [
 
 export function CareerMap() {
   return (
-    <section className="py-20 px-6 bg-surface/50">
+    <section id="roadmap" className="py-12 px-6 bg-surface/5 backdrop-blur-sm relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">Career </span>
@@ -105,10 +106,10 @@ export function CareerMap() {
         {/* Timeline Map */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-violet-500 to-emerald-500" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-emerald-500/50 via-violet-500/50 to-emerald-500/50" />
 
           {/* Experience Cards */}
-          <div className="space-y-12">
+          <div className="space-y-10">
             {EXPERIENCES.map((exp, index) => (
               <motion.div
                 key={index}
@@ -121,37 +122,37 @@ export function CareerMap() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className={`absolute left-8 md:left-1/2 w-4 h-4 rounded-full transform -translate-x-1/2 z-10
+                <div className={`absolute left-8 md:left-1/2 w-3 h-3 rounded-full transform -translate-x-1/2 z-10
                   ${exp.color === 'cyan' ? 'bg-emerald-500 shadow-lg shadow-emerald-500/50' :
                     exp.color === 'violet' ? 'bg-violet-500 shadow-lg shadow-violet-500/50' :
                     'bg-emerald-500 shadow-lg shadow-emerald-500/50'}
                 `} />
 
                 {/* Card */}
-                <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${
+                <div className={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${
                   index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                 }`}>
-                  <div className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-300">
+                  <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-300">
                     {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between mb-3">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <Building2 className="w-4 h-4 text-emerald-400" />
                           <span className="text-emerald-400 font-medium">{exp.company}</span>
                         </div>
                         <div className="flex items-center gap-2 text-white/60 text-sm">
-                          <MapPin className="w-3 h-3" />
+                          <MapPin className="w-3.5 h-3.5" />
                           <span>{exp.location}</span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-white/40 text-sm bg-white/5 px-3 py-1 rounded-full">
-                        <Calendar className="w-3 h-3" />
+                      <div className="flex items-center gap-2 text-white/40 text-[11px] bg-white/5 px-2.5 py-1 rounded-full font-mono">
+                        <Calendar className="w-3.5 h-3.5" />
                         <span>{exp.period}</span>
                       </div>
                     </div>
 
                     {/* Role */}
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Briefcase className="w-5 h-5 text-violet-400" />
                       {exp.role}
                     </h3>

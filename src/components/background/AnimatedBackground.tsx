@@ -1,10 +1,16 @@
 "use client";
 
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { AIGrid } from "./AIGrid";
-import { NeuralNetwork } from "./NeuralNetwork";
-import { TerminalOverlay } from "./TerminalOverlay";
+import { SignalFlowOverlay } from "./SignalFlowOverlay"; // New component
 import { useMounted } from "@/hooks/useMounted";
+
+// Dynamically import NeuralNetwork with SSR disabled to prevent React 19 internal conflicts during module evaluation
+const NeuralNetwork = dynamic(
+  () => import("./NeuralNetwork"),
+  { ssr: false, loading: () => <LoadingFallback /> }
+);
 
 function GradientOrbs() {
   return (
@@ -53,7 +59,7 @@ export function AnimatedBackground() {
   }
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Base gradient layer */}
       <div
         className="absolute inset-0"
@@ -80,9 +86,6 @@ export function AnimatedBackground() {
           background: "radial-gradient(ellipse at center, transparent 0%, rgba(11,15,25,0.8) 100%)",
         }}
       />
-
-      {/* Terminal overlay */}
-      <TerminalOverlay />
 
       {/* Noise texture overlay for depth */}
       <div
