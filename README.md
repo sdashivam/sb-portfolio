@@ -1,36 +1,314 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enterprise AI Portfolio
 
-## Getting Started
+A premium enterprise-grade AI Engineer portfolio built using Next.js, TypeScript, TailwindCSS, and Framer Motion.
 
-First, run the development server:
+This portfolio showcases:
+- Enterprise AI Systems
+- GenAI Applications
+- Multi-Agent Workflows
+- RAG Architectures
+- ML Engineering
+- AI Governance & Evaluation
+- Production AI Infrastructure
+
+---
+
+# Tech Stack
+
+## Frontend
+- Next.js 15+
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+
+## Visual & Animation
+- React Three Fiber
+- Three.js
+- React Flow
+- tsParticles
+
+## Deployment
+- Vercel
+
+---
+
+# Features
+
+## Enterprise AI Design System
+- Dark cinematic UI
+- Glassmorphism aesthetics
+- AI-inspired visual identity
+- Animated neural network backgrounds
+- Responsive layouts
+
+## Sections
+- Hero Section
+- Featured Projects
+- Architecture Showcase
+- Innovation Pipeline
+- Experience Timeline
+- Writing / Medium Integration
+- Contact Section
+
+## AI Visual System
+- Animated AI backgrounds
+- Neural network overlays
+- Data flow motion effects
+- Terminal-inspired UI elements
+
+---
+
+# Project Structure
+
+```bash
+sb-portfolio/
+│
+├── public/
+│   ├── images/
+│   ├── videos/
+│   ├── resume/
+│   └── favicon.ico
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── data/
+│   ├── lib/
+│   ├── styles/
+│   └── types/
+│
+├── CLAUDE.md
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+# Core Portfolio Sections
+
+## Hero Section
+The hero section contains:
+- Animated AI background
+- Enterprise AI branding
+- Technical positioning
+- Metrics cards
+- CTA buttons
+
+## Projects Section
+Projects are displayed as enterprise AI case studies.
+
+Each project includes:
+- Problem Statement
+- Architecture
+- Workflow
+- Tech Stack
+- Metrics
+- Challenges
+- Results
+
+## Architecture Section
+Interactive architecture visualizations for:
+- RAG systems
+- Multi-agent systems
+- Evaluation pipelines
+- Monitoring systems
+- AI orchestration workflows
+
+## Innovation Pipeline
+Experimental AI systems and upcoming research initiatives.
+
+## Writing Section
+Technical AI engineering articles integrated with Medium.
+
+---
+
+# Featured AI Systems
+
+## Multi-Agent Financial Intelligence System
+- LangGraph orchestration
+- Agent routing
+- Grounded reasoning
+- Evaluation workflows
+
+## Enterprise Financial RAG Platform
+- Hybrid retrieval
+- Semantic search
+- Re-ranking pipelines
+- Hallucination mitigation
+
+## Fraud Detection Platform
+- ML monitoring
+- Explainability
+- Governance
+- Drift detection
+
+## Surveillance Automation Platform
+- Workflow automation
+- Operational analytics
+- Reporting infrastructure
+
+---
+
+# Design Philosophy
+
+The portfolio is designed to communicate:
+- production-grade AI engineering
+- enterprise AI architecture expertise
+- systems thinking
+- engineering maturity
+- scalable AI infrastructure experience
+
+Design inspiration:
+- OpenAI
+- Anthropic
+- Vercel
+- Stripe
+
+---
+
+# Local Development
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/enterprise-ai-portfolio.git
+```
+
+---
+
+## Navigate Into Project
+
+```bash
+cd enterprise-ai-portfolio
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Recommended Dependencies
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install framer-motion lucide-react react-icons reactflow three @react-three/fiber @react-three/drei tsparticles react-tsparticles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Deployment
 
-## Deploy on Vercel
+This portfolio is optimized for deployment on Vercel. (https://sb-portfolio-opal.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy Using Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push repository to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+4. Built in agent for automatic pull requests
+
+
+---
+
+# Environment Variables
+
+Create:
+
+```bash
+.env.local
+```
+
+Example:
+
+```bash
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
+NEXT_PUBLIC_MEDIUM_URL=
+NEXT_PUBLIC_EMAIL=
+```
+
+---
+
+# Medium Integration
+
+The portfolio supports Medium article integration.
+
+Suggested article categories:
+- Enterprise RAG Systems
+- AI Governance
+- Multi-Agent Systems
+- Production ML Monitoring
+- GenAI Infrastructure
+
+---
+
+# Performance Optimization
+
+The project includes:
+- lazy loading
+- optimized animations
+- responsive rendering
+- image optimization
+- video optimization
+- smooth scrolling
+
+---
+
+# Future Enhancements
+
+Potential future additions:
+- AI chatbot assistant
+- Interactive architecture playground
+- AI demos
+- Blog CMS
+- Visitor analytics dashboard
+- AI evaluation visualizer
+
+---
+
+# Contact
+
+## LinkedIn
+Add your LinkedIn profile.
+
+## GitHub
+Add your GitHub repository links.
+
+## Medium
+Add your technical writing profile.
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+# Author
+
+Shivam Bhatt
+
+Applied AI Engineer  
+Enterprise GenAI Systems · ML Infrastructure · AI Architecture

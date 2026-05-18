@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { AnimatedBackground } from "../background/AnimatedBackground";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const METRICS = [
   { value: "4", label: "FTE Save" },
