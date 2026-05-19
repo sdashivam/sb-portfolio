@@ -16,7 +16,7 @@ function ContactNeuralScene() {
   const linesRef = useRef<THREE.LineSegments>(null);
 
   const { nodes, geometry, lineGeometry } = useMemo(() => {
-    const nodeCount = 40;
+    const nodeCount = 24;
     const nodes: Node[] = [];
     const positions: number[] = [];
     const connectionDistance = 3.5;
@@ -104,7 +104,11 @@ function ContactNeuralScene() {
 
 export function ContactR3FCanvasWrapper() {
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 50 }} gl={{ alpha: true }}>
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: 50 }}
+      dpr={[1, 1.5]}
+      gl={{ alpha: true, antialias: false, powerPreference: "low-power" }}
+    >
       <Float speed={0.5} rotationIntensity={0.2} floatIntensity={0.5}>
         <ContactNeuralScene />
       </Float>

@@ -2,9 +2,33 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Cpu, ShieldCheck, Zap, Activity, FileText } from "lucide-react";
+import { ArrowLeft, Cpu, ShieldCheck, Activity } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const architectureData: Record<string, any> = {
+type ArchitectureStep = {
+  step: string;
+  label: string;
+  desc: string;
+};
+
+type ArchitectureSection = {
+  title: string;
+  icon: LucideIcon;
+  steps: ArchitectureStep[];
+};
+
+type ArchitectureData = {
+  title: string;
+  description: string;
+  sections: ArchitectureSection[];
+  principles: string[];
+  infrastructure: Array<{
+    label: string;
+    value: string;
+  }>;
+};
+
+const architectureData: Record<string, ArchitectureData> = {
   "multi-agent": {
     title: "Multi-Agent Financial Intelligence System",
     description: "Enterprise-grade architecture for autonomous financial reasoning workflows, focusing on multi-agent orchestration, hybrid retrieval systems, and rigorous governance frameworks for grounded AI intelligence.",
@@ -140,14 +164,14 @@ export default function ArchitecturePage() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
-            {data.sections.map((section: any, i: number) => (
+            {data.sections.map((section, i) => (
               <div key={i}>
                 <h3 className="text-sm font-mono text-white/40 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
                   <section.icon className="w-4 h-4" />
                   {section.title}
                 </h3>
                 <div className="relative space-y-4">
-                  {section.steps.map((item: any, j: number) => (
+                  {section.steps.map((item, j) => (
                     <div 
                       key={j} 
                       className="relative flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/10 group hover:border-accent-cyan/30 transition-colors"
@@ -172,7 +196,7 @@ export default function ArchitecturePage() {
                 Governance & Guardrails
               </h3>
               <p className="text-xs text-white/70 leading-relaxed italic mb-4">
-                "Fail-safe behavior: All final responses shall be supported by retrieved evidence. Low-confidence outputs trigger human-in-the-loop review."
+                &quot;Fail-safe behavior: All final responses shall be supported by retrieved evidence. Low-confidence outputs trigger human-in-the-loop review.&quot;
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-[10px] p-2 bg-black/20 rounded border border-white/5 text-white/50 uppercase text-center">Grounding Check</div>
@@ -199,7 +223,7 @@ export default function ArchitecturePage() {
             <div>
               <h3 className="text-xs font-mono text-white/40 uppercase tracking-widest mb-4">Infrastructure</h3>
               <div className="space-y-3">
-                {data.infrastructure.map((item: any, i: number) => (
+                {data.infrastructure.map((item, i) => (
                   <div key={i} className="flex justify-between text-[11px]">
                     <span className="text-white/40">{item.label}</span>
                     <span className="text-white/80">{item.value}</span>

@@ -16,7 +16,7 @@ function NeuralNetworkScene() {
   const linesRef = useRef<THREE.LineSegments>(null);
 
   const { nodes, geometry, lineGeometry } = useMemo(() => {
-    const nodeCount = 50;
+    const nodeCount = 32;
     const nodes: Node[] = [];
     const positions: number[] = [];
     const colors: number[] = [];
@@ -144,7 +144,8 @@ export function R3FCanvasWrapper() {
   return (
     <Canvas
       camera={{ position: [0, 0, 15], fov: 60 }}
-      gl={{ antialias: true, alpha: true }}
+      dpr={[1, 1.5]}
+      gl={{ antialias: false, alpha: true, powerPreference: "low-power" }}
       style={{ background: "transparent" }}
     >
       <Float speed={0.5} rotationIntensity={0.1} floatIntensity={0.5}>

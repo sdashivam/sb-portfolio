@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import type { MouseEvent } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink, type NavItem } from "./NavLink";
 import { MobileMenu } from "./MobileMenu";
@@ -150,7 +151,7 @@ export function Navbar() {
                 : "rounded-none border border-transparent bg-transparent"
             }`}
           >
-            <a
+            <Link
               href="/"
               aria-label="Shivam Bhatt home"
               onClick={handleBrandClick}
@@ -160,14 +161,14 @@ export function Navbar() {
                 <span className="absolute -left-px top-0 h-2 w-px bg-cyan-200 shadow-[0_0_12px_rgba(103,232,249,0.75)]" />
                 <span className="absolute -left-px bottom-0 h-2 w-px bg-cyan-300/40" />
                 <span className="flex items-center gap-2 font-mono text-[18px] font-semibold tracking-[0.1em] text-white">
-                  SB<span className="text-cyan-200">//</span>
+                  SB<span className="text-cyan-200">{"//"}</span>
                   <span className="hidden h-px w-6 bg-cyan-300/40 shadow-[0_0_12px_rgba(103,232,249,0.45)] sm:block" />
                 </span>
                 <span className="mt-1.5 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.32em] text-white/50 group-hover:text-cyan-100/70">
                   Enterprise AI Systems
                 </span>
               </span>
-            </a>
+            </Link>
 
             <nav
               aria-label="Primary navigation"

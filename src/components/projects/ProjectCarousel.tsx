@@ -134,7 +134,9 @@ const colorClasses: Record<string, string> = {
   orange: "border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5",
 };
 
-const ArchitectureModal = ({ project, onClose }: { project: any, onClose: () => void }) => {
+type Project = (typeof PROJECTS)[number];
+
+const ArchitectureModal = ({ project, onClose }: { project: Project, onClose: () => void }) => {
   // Data derived from multiAgent.md for the specific Multi-Agent project
   const isMultiAgent = project.title.includes("Multi-Agent");
   const isInternal = project.architectureLink?.startsWith('/');
@@ -165,7 +167,12 @@ const ArchitectureModal = ({ project, onClose }: { project: any, onClose: () => 
               <p className="text-xs font-mono text-accent-cyan uppercase tracking-widest">System Architecture Standard v1.0</p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+          <button
+            type="button"
+            aria-label="Close architecture modal"
+            onClick={onClose}
+            className="p-2 hover:bg-white/10 rounded-full transition-colors"
+          >
             <X className="w-5 h-5 text-white/50" />
           </button>
         </div>
@@ -203,7 +210,7 @@ const ArchitectureModal = ({ project, onClose }: { project: any, onClose: () => 
                     <ShieldCheck className="w-4 h-4" /> Governance & Guardrails
                   </h3>
                   <p className="text-xs text-white/70 leading-relaxed italic mb-4">
-                    "Fail-safe behavior: All final responses shall be supported by retrieved evidence. Low-confidence outputs trigger human-in-the-loop review."
+                    &quot;Fail-safe behavior: All final responses shall be supported by retrieved evidence. Low-confidence outputs trigger human-in-the-loop review.&quot;
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-[10px] p-2 bg-black/20 rounded border border-white/5 text-white/50 uppercase">Grounding Check</div>
@@ -293,7 +300,7 @@ const ArchitectureModal = ({ project, onClose }: { project: any, onClose: () => 
 
 export function ProjectCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [selectedArch, setSelectedArch] = useState<any>(null);
+  const [selectedArch, setSelectedArch] = useState<Project | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -337,12 +344,16 @@ export function ProjectCarousel() {
         {/* Navigation Buttons */}
         <div className="flex justify-end gap-2 mb-4">
           <button
+            type="button"
+            aria-label="Scroll projects left"
             onClick={() => scroll("left")}
             className="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all"
           >
             <ArrowLeft className="w-5 h-5 text-white/70" />
           </button>
           <button
+            type="button"
+            aria-label="Scroll projects right"
             onClick={() => scroll("right")}
             className="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all"
           >
@@ -386,7 +397,9 @@ export function ProjectCarousel() {
               <div className="space-y-2 mb-6 flex-grow">
                 <div>
                   <span className="text-[10px] font-semibold text-white/30 uppercase tracking-wider mr-2">Purpose:</span>
-                  <p className="text-white/80 text-xs italic leading-relaxed">"{project.purpose}"</p>
+                  <p className="text-white/80 text-xs italic leading-relaxed">
+                    &quot;{project.purpose}&quot;
+                  </p>
                 </div>
                 <div>
                   <span className="text-[10px] font-semibold text-white/30 uppercase tracking-wider mr-2">Focus:</span>

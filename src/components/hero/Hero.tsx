@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { AnimatedBackground } from "../background/AnimatedBackground";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const METRICS = [
   { value: "4", label: "FTE Save" },
@@ -15,9 +13,6 @@ const METRICS = [
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <AnimatedBackground />
-
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

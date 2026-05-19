@@ -3,7 +3,6 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { AIGrid } from "./AIGrid";
-import { SignalFlowOverlay } from "./SignalFlowOverlay"; // New component
 import { useMounted } from "@/hooks/useMounted";
 
 // Dynamically import NeuralNetwork with SSR disabled to prevent React 19 internal conflicts during module evaluation
